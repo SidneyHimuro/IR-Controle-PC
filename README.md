@@ -122,8 +122,9 @@ To make assembly easier, follow the connection table below:
 | :--- | :--- | :--- |
 | **VS1838B (OUT)** | D2 | IR Signal Input |
 | **PC817 (Anode)** | D3 | Optocoupler Trigger (Power SW) |
-| **PC Status (5V)** | D4 | Monitor if PC is ON/OFF |
-| **VCC/GND** | 5V / GND | Power from 5VSB |
+| **PC Status (5V)** | D4 | Monitor if PC is ON/OFF from 5V Red cable |
+| **VCC** | 5V | Power from 5VSB Purple cable |
+| **GND** | GND | GND black cable |
 
 ---
 
