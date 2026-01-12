@@ -71,7 +71,7 @@ Infrared commands are received by the VS1838B and processed by the microcontroll
 - **PC ON**
   - 3 button presses within 5 seconds → POWER signal sent → PC turns OFF
 
-![System Running](images/funcionamento/pc_ligado.jpg)
+![System Running](images/funcionamento/pc_ligado.jpeg)
 
 ---
 
