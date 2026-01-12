@@ -123,8 +123,8 @@ The PCB was designed using **EasyEDA**, featuring:
 - Correct IR receiver placement  
 - Dedicated connectors  
 
-![PCB Top](images/pcb/pcb_top.png)
-![PCB Bottom](images/pcb/pcb_bottom.png)
+![PCB Top](images/pcb/pcb_top.jpg)
+![PCB Bottom](images/pcb/pcb_bottom.jpg)
 
 ---
 
