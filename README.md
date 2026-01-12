@@ -10,9 +10,33 @@ Infrared remote control system to turn a PC ON and OFF using Arduino, with full 
 
 This project allows controlling a computer POWER button using an infrared remote control, while ensuring:
 
-- Full electrical isolation from the motherboard
-- Standby operation using ATX 5VSB
-- Protection against accidental shutdowns
+- Full electrical isolation from the motherboard  
+- Standby operation using ATX 5VSB  
+- Protection against accidental shutdowns  
+
+---
+
+## 📁 Repository Structure
+
+IR-Controle-PC/
+├── src/
+│   ├── IRcontrolePC/        # Main firmware
+│   └── IRTest/              # IR protocol test sketch
+├── pcb/
+│   ├── easyeda/             # EasyEDA project files
+│   ├── gerber/              # Manufacturing Gerber files
+│   └── renders/             # PCB 3D renders
+├── docs/
+│   └── Projeto_IR_Controle_PC_Documentacao_Final.pdf
+├── images/
+│   ├── pcb/
+│   ├── montagem/
+│   ├── funcionamento/
+│   └── app/
+└── README.md
+
+---
+
 
 ---
 
@@ -53,15 +77,15 @@ Infrared commands are received by the VS1838B and processed by the microcontroll
 
 The motherboard POWER button is driven exclusively through a PC817 optocoupler, ensuring:
 
-- Complete electrical isolation
-- No shared GND between Arduino and motherboard
+- Complete electrical isolation  
+- No shared GND between Arduino and motherboard  
 
 ---
 
 ## 🔋 Power Supply
 
-- **5VSB (purple wire):** continuous power for the Arduino
-- **5V (red wire):** used only as PC status signal
+- **5VSB (purple wire):** continuous power for the Arduino  
+- **5V (red wire):** used only as PC status signal  
 
 ---
 
@@ -70,11 +94,11 @@ The motherboard POWER button is driven exclusively through a PC817 optocoupler, 
 The firmware uses an IR decoding library to process remote commands.
 
 ### IR Remote Identification
-To identify the IR protocol and command values:
-1. Upload the `IRTest` sketch
-2. Open the Serial Monitor
-3. Press the desired remote button
-4. Copy the protocol, address, and command values
+
+1. Upload the `IRTest` sketch  
+2. Open the Serial Monitor  
+3. Press the desired remote button  
+4. Copy the protocol, address, and command values  
 
 These values must be inserted into the main firmware `IRcontrolePC`.
 
@@ -91,10 +115,11 @@ The **Xiaomi Mi Remote** application can replace the physical remote control by 
 ## 🖨️ PCB
 
 The PCB was designed using **EasyEDA**, featuring:
-- Proper optocoupler isolation
-- Ground plane
-- Correct IR receiver placement
-- Dedicated connectors
+
+- Proper optocoupler isolation  
+- Ground plane  
+- Correct IR receiver placement  
+- Dedicated connectors  
 
 ![PCB Top](images/pcb/pcb_top.png)
 ![PCB Bottom](images/pcb/pcb_bottom.png)
@@ -103,7 +128,7 @@ The PCB was designed using **EasyEDA**, featuring:
 
 ## 📄 Documentation
 
-Complete technical documentation is available in:
+Complete technical documentation is available in PDF format:
 
 📄 `docs/Projeto_IR_Controle_PC_Documentacao_Final.pdf`
 
@@ -111,10 +136,10 @@ Complete technical documentation is available in:
 
 ## 🚀 Possible Expansions
 
-- ESP32 + Wi-Fi
-- Home Assistant integration
-- Custom Android application
-- Home automation systems
+- ESP32 + Wi-Fi  
+- Home Assistant integration  
+- Custom Android application  
+- Home automation systems  
 
 ---
 
