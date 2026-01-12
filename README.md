@@ -35,6 +35,8 @@ IR-Controle-PC/
 │   ├── funcionamento/
 │   └── app/
 └── README.md
+
+```
 ---
 
 
