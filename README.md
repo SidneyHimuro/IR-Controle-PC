@@ -18,14 +18,15 @@ This project allows controlling a computer POWER button using an infrared remote
 
 ## 📁 Repository Structure
 
+```text
 IR-Controle-PC/
 ├── src/
-│   ├── IRcontrolePC/        # Main firmware
-│   └── IRTest/              # IR protocol test sketch
+│   ├── IRcontrolePC/       # Main firmware
+│   └── IRTest/             # IR protocol test sketch
 ├── pcb/
-│   ├── easyeda/             # EasyEDA project files
-│   ├── gerber/              # Manufacturing Gerber files
-│   └── renders/             # PCB 3D renders
+│   ├── easyeda/            # EasyEDA project files
+│   ├── gerber/             # Manufacturing Gerber files
+│   └── renders/            # PCB 3D renders
 ├── docs/
 │   └── Projeto_IR_Controle_PC_Documentacao_Final.pdf
 ├── images/
@@ -34,7 +35,6 @@ IR-Controle-PC/
 │   ├── funcionamento/
 │   └── app/
 └── README.md
-
 ---
 
 
