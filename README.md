@@ -106,13 +106,24 @@ These values must be inserted into the main firmware `IRcontrolePC`.
 
 ---
 
-## 📱 Smartphone Control (Optional)
+## 📱 Smartphone Control
 
-This hardware is compatible with standard IR protocols. If you have a smartphone with a built-in IR transmitter (like many Xiaomi devices), you can use the Mi Remote app or any similar IR remote application to control your PC.
+The **Mi Remote** application (or similar IR apps) can replace the physical remote control by using a smartphone's built-in IR transmitter.
 
-Note: "Mi Remote" and "Xiaomi" are trademarks of Xiaomi Inc. This project is independent and not affiliated with them.
+> **Note:** "Xiaomi" and "Mi Remote" are trademarks of Xiaomi Inc. This project is independent and has no official affiliation with them.
 
-![Mi Remote App](images/app/mi_remote.jpg)
+---
+
+## 📌 Pinout (Arduino Nano)
+
+To make assembly easier, follow the connection table below:
+
+| Component | Arduino Pin | Function |
+| :--- | :--- | :--- |
+| **VS1838B (OUT)** | D2 | IR Signal Input |
+| **PC817 (Anode)** | D3 | Optocoupler Trigger (Power SW) |
+| **PC Status (5V)** | D4 | Monitor if PC is ON/OFF |
+| **VCC/GND** | 5V / GND | Power from 5VSB |
 
 ---
 
