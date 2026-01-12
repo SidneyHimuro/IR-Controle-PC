@@ -2,7 +2,7 @@
 
 Infrared remote control system to turn a PC ON and OFF using Arduino, with full electrical isolation from the motherboard and smart safety logic.
 
-![PCB 3D](images/pcb/pcb_3d.png)
+![PCB 3D](images/pcb/pcb_3d.jpg)
 
 ---
 
