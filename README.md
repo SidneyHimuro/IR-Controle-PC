@@ -50,7 +50,7 @@ IR-Controle-PC/
 - Standard ATX Power Supply
 - ATX-compatible motherboard
 
-![Assembled Board](images/montagem/placa_montada.jpg)
+![Assembled Board](images/montagem/IR-Controle-PC_Schematic_v1.png)
 
 ---
 
