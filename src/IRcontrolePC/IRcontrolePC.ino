@@ -7,9 +7,11 @@
 #define DESLIGAR_CLIQUES 3
 #define TEMPO_MAX_MS     5000
 
-// Controle IR (NEC)
-#define IR_ADDRESS 0x40
-#define IR_COMMAND 0x53
+// IR Control Mapping - Replace with your codes
+// Use IRremote "ReceiveDump" example to find your remote's info
+#define IR_PROTOCOL    NEC           // Protocol type (e.g., NEC, SONY, SAMSUNG)
+#define IR_ADDRESS     0x00          // Place your Remote Address here
+#define IR_COMMAND     0x00          // Place your Button Command here
 
 unsigned long tempoInicio = 0;
 int contadorCliques = 0;
@@ -30,20 +32,21 @@ void loop() {
 
   if (IrReceiver.decode()) {
 
+    // Check if the received signal matches your defined mapping
     if (
-      IrReceiver.decodedIRData.protocol == NEC &&
-      IrReceiver.decodedIRData.address  == IR_ADDRESS &&
-      IrReceiver.decodedIRData.command  == IR_COMMAND &&
+      IrReceiver.decodedIRData.protocol == IR_PROTOCOL &&
+      IrReceiver.decodedIRData.address  == IR_ADDRESS  &&
+      IrReceiver.decodedIRData.command  == IR_COMMAND  &&
       !(IrReceiver.decodedIRData.flags & IRDATA_FLAGS_IS_REPEAT)
     ) {
 
-      // ===== PC DESLIGADO → 1 clique liga =====
+      // ===== PC OFF → 1 click turns it ON =====
       if (!pcLigado) {
         ligarPC();
         contadorCliques = 0;
       }
 
-      // ===== PC LIGADO → contar cliques =====
+      // ===== PC ON → Count clicks to turn OFF =====
       else {
         registrarClique();
       }
@@ -52,13 +55,13 @@ void loop() {
     IrReceiver.resume();
   }
 
-  // Reseta se estourar o tempo
-  if (contadorCliques > 0 && millis() - tempoInicio > TEMPO_MAX_MS) {
+  // Reset counter if time limit is reached
+  if (contadorCliques > 0 && (millis() - tempoInicio > TEMPO_MAX_MS)) {
     contadorCliques = 0;
   }
 }
 
-// ================= FUNÇÕES =================
+// ================= FUNCTIONS =================
 
 void registrarClique() {
 
