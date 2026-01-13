@@ -146,6 +146,8 @@ The PCB was designed using **EasyEDA**, featuring:
 
 Complete technical documentation is available in PDF format:
 
+📄 `docs/Project_IR_Controle_PC_Final_Documentation.pdf`
+
 📄 `docs/Projeto_IR_Controle_PC_Documentacao_Final.pdf`
 
 ---
