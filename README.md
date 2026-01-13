@@ -95,14 +95,46 @@ The motherboard POWER button is driven exclusively through a PC817 optocoupler, 
 
 The firmware uses an IR decoding library to process remote commands.
 
-### IR Remote Identification
+🔍 IR Remote Identification
 
-1. Upload the `IRTest` sketch  
-2. Open the Serial Monitor  
-3. Press the desired remote button  
-4. Copy the protocol, address, and command values  
+Before uploading the main project firmware, you must first use the sketch located at:
+```text
 
-These values must be inserted into the main firmware `IRcontrolePC`.
+src/IRTest/IRTest.ino
+
+```
+
+▶ How to use IRTest
+
+1. Upload the IRTest sketch to the Arduino
+
+2. Open the Serial Monitor
+
+3. Set the baud rate to 9600
+
+4. Press the desired remote button while pointing to the IR receiver
+
+You will see output similar to:
+
+- Protocol: (e.g. NEC)
+
+- Address: (e.g. 0x04)
+
+- Command: (e.g. 0x08)
+
+
+🧩 Applying the values
+
+These values must be inserted into the main firmware IRcontrolePC:
+```text
+
+#define IR_PROTOCOL    NEC
+#define IR_ADDRESS     0x04
+#define IR_COMMAND     0x08
+
+```
+
+This ensures the Arduino reacts only to the selected button, ignoring all other IR signals.
 
 ---
 
